@@ -1,4 +1,4 @@
-package clabr.twins.od.clabysh
+package clabr.twins.od.clabysh.ui
 
 import android.content.Intent
 import android.os.Bundle
