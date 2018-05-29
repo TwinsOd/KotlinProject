@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         add_new_game_image.setOnClickListener(this)
         add_new_game_text.setOnClickListener(this)
 
-        App.get(this).repository!!.getGames(object : LoadDataCallback<List<String>> {
+        App[this].repository!!.getGames(object : LoadDataCallback<List<String>> {
             override fun onDataLoaded(response: List<String>) {
                 listGames = response
             }
@@ -32,9 +32,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         })
     }
 
-    override fun onClick(p0: View?) {
-        if (p0 != null) {
-            when (p0.id) {
+    override fun onClick(v: View?) {
+        if (v != null) {
+            when (v.id) {
                 R.id.layout_new_game -> Toast.makeText(this, listGames!![0], Toast.LENGTH_SHORT).show()
                 R.id.add_new_game_image -> Toast.makeText(this, listGames!![1], Toast.LENGTH_SHORT).show()
                 R.id.add_new_game_text -> Toast.makeText(this, listGames!![2], Toast.LENGTH_SHORT).show()
