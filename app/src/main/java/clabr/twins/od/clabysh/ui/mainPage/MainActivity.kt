@@ -18,10 +18,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        layout_new_game.setOnClickListener({
+        layout_new_game.setOnClickListener {
             Toast.makeText(this, "click new game", Toast.LENGTH_SHORT).show()
-        })
+        }
         game_list.layoutManager = LinearLayoutManager(this)
+        with(ItemClickSupport.addTo(game_list)) {
+            setOnItemClickListener { game_list }
+            setOnItemLongClickListener { game_list; true }
+        }
         App[this].repository!!.getGames(object : LoadDataCallback<List<GameModel>> {
             override fun onDataLoaded(response: List<GameModel>) {
                 listGames = response

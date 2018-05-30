@@ -3,7 +3,7 @@ package clabr.twins.od.clabysh.data.repository
 import android.content.Context
 import clabr.twins.od.clabysh.data.model.GameModel
 
-class RepositoryImpl(context: Context) : Repository {
+class RepositoryImpl(private var context: Context) : Repository {
 
     override fun getGames(callback: LoadDataCallback<List<GameModel>>) {
         val list: MutableList<GameModel> = mutableListOf()
