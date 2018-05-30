@@ -3,6 +3,8 @@ package clabr.twins.od.clabysh
 import android.app.Application
 import android.content.Context
 import clabr.twins.od.clabysh.data.model.GameModel
+import clabr.twins.od.clabysh.data.model.TeamModel
+import clabr.twins.od.clabysh.data.model.ScoreModel
 import clabr.twins.od.clabysh.data.repository.Repository
 import clabr.twins.od.clabysh.data.repository.RepositoryImpl
 import com.imangazaliev.notelin.mvp.model.AppDatabase
@@ -20,6 +22,8 @@ class App : Application() {
 
         val appDatabaseConfig = DatabaseConfig.Builder(AppDatabase::class.java)
                 .addModelClasses(GameModel::class.java)
+                .addModelClasses(TeamModel::class.java)
+                .addModelClasses(ScoreModel::class.java)
                 .build()
 
         ReActiveAndroid.init(ReActiveConfig.Builder(this)
