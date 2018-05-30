@@ -13,13 +13,13 @@ class GameModel : Model {
     @PrimaryKey
     var id: Long = 0
     @Column(name = "name_player_1")
-    var NamePlater_1: String? = null
+    var namePlater_1: String? = null
     @Column(name = "name_player_2")
-    var NamePlater_2: String? = null
+    var namePlater_2: String? = null
     @Column(name = "name_player_3")
-    var NamePlater_3: String? = null
+    var namePlater_3: String? = null
     @Column(name = "name_player_4")
-    var NamePlater_4: String? = null
+    var namePlater_4: String? = null
     @Column(name = "created_at")
     var createAt: Date? = null
     @Column(name = "change_at")
@@ -27,11 +27,11 @@ class GameModel : Model {
     @Column(name = "max_score")
     var maxScore: Int? = null
     @Column(name = "team_1")
-    var team_1: PlayerModel? = null
+    var team_1: TeamModel? = null
     @Column(name = "team_2")
-    var team_2: PlayerModel? = null
+    var team_2: TeamModel? = null
     @Column(name = "team_3")
-    var team_3: PlayerModel? = null
+    var team_3: TeamModel? = null
     @Column(name = "count_players")
     var countPlayers: Int? = null
 

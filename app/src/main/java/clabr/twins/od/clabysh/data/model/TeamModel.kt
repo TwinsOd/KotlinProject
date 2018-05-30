@@ -6,20 +6,20 @@ import com.reactiveandroid.annotation.Column
 import com.reactiveandroid.annotation.PrimaryKey
 import com.reactiveandroid.annotation.Table
 
-@Table(name = "PlayerModel", database = AppDatabase::class)
-class PlayerModel : Model {
+@Table(name = "TeamModel", database = AppDatabase::class)
+class TeamModel : Model {
 
     @PrimaryKey
     var id: Long = 0
     @Column(name = "beyt_count")
     var beytCount: Int? = null
-    @Column(name = "score_model")
-    var scoreListModel: List<ScoreModel>? = null
-
-    constructor(beytCount: Int, scoreListModel: List<ScoreModel>) {
-        this.beytCount = beytCount
-        this.scoreListModel = scoreListModel
-    }
+//    @Column(name = "score_model")
+//    var scoreListModel: List<ScoreModel>? = null
+//
+//    constructor(beytCount: Int, scoreListModel: List<ScoreModel>) {
+//        this.beytCount = beytCount
+//        this.scoreListModel = scoreListModel
+//    }
 
     constructor()
 
