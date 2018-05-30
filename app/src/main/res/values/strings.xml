@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Clabysh</string>
     <string name="new_game">Новая игра</string>
+    <string name="games_list_empty">No games found</string>
 </resources>

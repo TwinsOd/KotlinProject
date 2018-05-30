@@ -35,8 +35,8 @@ class GameModel : Model {
     @Column(name = "count_players")
     var countPlayers: Int? = null
 
-    constructor(createAt: Date, maxScore: Int, countPlayers: Int) {
-        this.createAt = createAt
+    constructor(maxScore: Int, countPlayers: Int) {
+        this.createAt = Calendar.getInstance().time
         this.maxScore = maxScore
         this.countPlayers = countPlayers
     }
