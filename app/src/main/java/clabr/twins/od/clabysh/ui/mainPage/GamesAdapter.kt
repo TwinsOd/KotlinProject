@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import clabr.twins.od.clabysh.R
 import clabr.twins.od.clabysh.data.model.GameModel
-import com.imangazaliev.notelin.utils.formatDate
+import clabr.twins.od.clabysh.data.utils.formatDate
 
 
 class GamesAdapter(private val gamesList: List<GameModel>) : RecyclerView.Adapter<GamesAdapter.ViewHolder>() {
@@ -21,7 +21,7 @@ class GamesAdapter(private val gamesList: List<GameModel>) : RecyclerView.Adapte
     fun onBindViewHolder(viewHolder: GamesAdapter.ViewHolder, i: Int) {
         val model = gamesList[i]
         viewHolder.noteTitle.text = String.format("number %s", i)
-        viewHolder.noteDate.text = formatDate(model.changedAt)
+        viewHolder.noteDate.text = formatDate(model.createAt)
     }
 
     override fun getItemCount(): Int {

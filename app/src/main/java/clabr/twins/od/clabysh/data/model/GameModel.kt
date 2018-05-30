@@ -36,7 +36,7 @@ class GameModel : Model {
     var countPlayers: Int? = null
 
     constructor(maxScore: Int, countPlayers: Int) {
-        this.createAt = Calendar.getInstance().time
+        createAt = Calendar.getInstance().time
         this.maxScore = maxScore
         this.countPlayers = countPlayers
     }

@@ -1,6 +1,6 @@
 @file:JvmName("DateUtils")
 
-package com.imangazaliev.notelin.utils
+package clabr.twins.od.clabysh.data.utils
 
 import java.text.SimpleDateFormat
 import java.util.*
